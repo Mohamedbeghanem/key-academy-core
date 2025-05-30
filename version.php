@@ -1,8 +1,24 @@
 <?php
+
+// This file is part of Moodle - http://moodle.org/
+//
+// Moodle is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+//
+// Moodle is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 /**
- * KEY ACADEMY VERSION INFORMATION.
+ * MOODLE VERSION INFORMATION.
  *
- * This file defines the current version of the KEY Academy code being used.
+ * This file defines the current version of the core Moodle code being used.
  * This is compared against the values stored in the database to determine
  * whether upgrades should be performed (see lib/db/*.php)
  *
@@ -13,9 +29,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$version  = 2025063000.00;              // YYYYMMDD      = release date of your 1.0 beta
-                                        //         RR    = release increments - 00 for first release
-                                        //           .XX = incremental changes
-$release  = 'KEY Academy 1.0beta (Build: 20250630)';    // Human-friendly version name
-$branch   = '100';                      // This version's branch (1.0.0)
-$maturity = MATURITY_BETA;             // Changed from ALPHA to BETA
+$version  = 2025053000.00;              // YYYYMMDD      = weekly release date of this DEV branch.
+                                        //         RR    = release increments - 00 in DEV branches.
+                                        //           .XX = incremental changes.
+$release  = '5.1dev (Build: 20250530)';    // Human-friendly version name
+$branch   = '501';                      // This version's branch.
+$maturity = MATURITY_ALPHA;             // This version's maturity level.
