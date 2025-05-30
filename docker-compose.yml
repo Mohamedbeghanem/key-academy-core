@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  moodle:
+    build: .
+    ports:
+      - "8090:80"
+    environment:
+      - MOODLE_DB_TYPE=mysqli
+      - MOODLE_DB_HOST=db
+      - MOODLE_DB_USER=root
+      - MOODLE_DB_PASSWORD=rootpass
+      - MOODLE_DB_NAME=moodle
+      - MOODLE_DB_PREFIX=mdl_
+    volumes:
+      - moodledata:/var/www/html/moodledata
+    depends_on:
+      - db
+    restart: unless-stopped
+
+  db:
+    image: mariadb:10.6
+    environment:
+      - MARIADB_ROOT_PASSWORD=rootpass
+      - MARIADB_DATABASE=moodle
+    volumes:
+      - dbdata:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  moodledata:
+  dbdata:
